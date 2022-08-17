@@ -26,6 +26,14 @@ sudo dpkg -i /tmp/skypeforlinux-64.deb
 echo "The upgrade is complete!"
 echo "Launch a new version!";;
 
+-telega) echo "Starting update Telegramm!"
+sleep 5
+wget https://telegram.org/dl/desktop/linux -O /tmp/linux
+sudo tar xJf /tmp/linux -C /opt/
+sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+echo "The upgrade is complete!"
+echo "Launch a new version!";;
+
 *) echo "$1 is not an option" ;;
 esac
 shift
